@@ -20,11 +20,11 @@ jobs:
 
     - name: Git clone cable
       run:
-        cd develop && git clone https://${{ secrets.CABLE_TOKEN }}@github.com/cdle/cable.git
+        cd develop && git clone https://${{ secrets.CABLE_TOKEN }}@github.com/SandiTT/cable.git
         
     - name: Git clone jd_price
       run:
-        cd develop && git clone https://github.com/cdle/jd_price.git
+        cd develop && git clone https://github.com/SandiTT/jd_price.git
         
     - name: Git clone jd_cookie
       run:
@@ -42,7 +42,7 @@ jobs:
         GOOS=linux GOARCH=arm64 go build -ldflags "-s -w" -o sillyGirl_linux_arm64
         GOOS=linux GOARCH=amd64 go build -ldflags "-s -w" -o sillyGirl_linux_amd64
         GOOS=windows GOARCH=amd64 go build -ldflags "-s -w" -o sillyGirl_windows_amd64.exe
-        git clone https://${{ secrets.CABLE_TOKEN }}@github.com/cdle/binary.git
+        git clone https://${{ secrets.CABLE_TOKEN }}@github.com/SandiTT/binary.git
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
         cd binary
